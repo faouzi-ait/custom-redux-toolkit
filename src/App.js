@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from './pages/Home';
 import FirstPage from './pages/FirstPage';
-import ThirdPage from './pages/ThirdPage';
 import SecondPage from './pages/SecondPage';
+import ThirdPage from './pages/ThirdPage';
+import FourthPage from './pages/FourthPage';
 
 import { Navigation } from './components';
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="counter" element={<FirstPage />} />
           <Route path="query" element={<SecondPage />} />
           <Route path="mutation" element={<ThirdPage />} />
+          <Route path="queries" element={<FourthPage />} />
         </Routes>
       </Router>
     </main>

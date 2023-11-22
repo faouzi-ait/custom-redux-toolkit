@@ -16,6 +16,9 @@ const Navigation = () => {
           Query Page
         </Link>
         <Link to="mutation">Mutation Page</Link>
+        <Link to="queries" style={{ margin: '1rem' }}>
+          Queries Page
+        </Link>
       </nav>
     </>
   );

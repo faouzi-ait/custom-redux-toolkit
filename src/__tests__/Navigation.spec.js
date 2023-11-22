@@ -12,7 +12,7 @@ test('renders navigation links', () => {
   render(
     <MemoryRouter>
       <Navigation />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 
   const homeLink = screen.getByText(/Home Page/i);
@@ -25,4 +25,3 @@ test('renders navigation links', () => {
   expect(queryLink).toBeInTheDocument();
   expect(mutationLink).toBeInTheDocument();
 });
-

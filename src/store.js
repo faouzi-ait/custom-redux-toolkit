@@ -24,7 +24,11 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat([api.pokemonApi.middleware, api.placeholderApi.middleware]),
+    }).concat([
+      api.pokemonApi.middleware,
+      api.placeholderApi.middleware,
+      api.unsplashApi.middleware,
+    ]),
 });
 
 setupListeners(store.dispatch);

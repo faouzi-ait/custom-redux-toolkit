@@ -9,7 +9,7 @@ export const placeholderApi = createApi({
   endpoints: (builder) => ({
     getPosts: builder.query({
       query: () => 'posts',
-      providesTags: ['Post']
+      providesTags: ['Post'],
     }),
     createPost: builder.mutation({
       query: (body) => ({
