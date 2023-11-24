@@ -2,6 +2,15 @@
 @import './partials/mixins';
 @import './partials/global';
 
+body {
+  color: rgb(155, 155, 155);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+a {
+  color: rgb(155, 155, 155);
+}
+
 .postLayout {
   display: grid;
   grid-template-columns: repeat(auto-fill, 280px);
@@ -15,4 +24,46 @@
   flex-direction: column;
   border: 1px solid lightgrey;
   padding: 10px;
+}
+
+.imageLayout {
+  display: grid;
+  grid-template-columns: repeat(5, 30%);
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.imgContainer {
+  position: relative;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+.checked {
+  color: orange;
+}
+
+.likes {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: white;
+}
+
+.views {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 5px;
+  color: white;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 5px;
+  left: 0.5rem;
+  color: white;
 }

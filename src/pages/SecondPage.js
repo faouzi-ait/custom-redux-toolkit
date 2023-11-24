@@ -1,6 +1,5 @@
 import React from 'react';
 import { useGetPokemonByNameQuery } from '../apiServices/pokemonApi';
-// import {} from './components/';
 
 const SecondPage = () => {
   const { data /*, error, isLoading  */ } =

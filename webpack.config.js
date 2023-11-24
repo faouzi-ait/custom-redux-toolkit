@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const portfinder = require('portfinder');
 
 module.exports = async (env, argv) => {
@@ -75,6 +76,15 @@ module.exports = async (env, argv) => {
         minRatio: 0.8,
         deleteOriginalAssets: false,
       }),
+      new TerserWebpackPlugin({
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+      new Dotenv(),
     ],
     optimization: {
       minimizer: [
